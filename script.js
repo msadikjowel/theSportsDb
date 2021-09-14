@@ -1,3 +1,5 @@
+// error catch
+const error = document.getElementById('error')
 /* Player info after Search Button Clicked */
 
 const searchInfo = () => {
@@ -8,6 +10,10 @@ const searchInfo = () => {
     document.getElementById('players-container').innerHTML = '';
     document.getElementById('players-details').innerHTML = '';
     document.getElementById('player-about').innerHTML = '';
+
+    if (playerName.value === '') {
+        error.innerText = ''
+    }
 }
 // spinner
 
